@@ -31,7 +31,7 @@ export default() => {
     const fetchWithTokenCheck = async <T>(url: string, options: object) => {
         const response = await useFetch<T>(url, options)
         console.log('line33  response.error.value=',response.error.value)
-        console.log('line33  rresponse.error.value.statusCode=' ,response.error.value.statusCode)
+        console.log('line33  rresponse.error.value.statusCode= ดูจาก error.value.stauscode')
         if(response.error.value && response.error.value.statusCode === 403){
             // หาก token หมดอายุหรือไม่ถูกต้องให้ redirect ไปหน้า login
             $swal.fire({
