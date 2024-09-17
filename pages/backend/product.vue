@@ -232,7 +232,8 @@ const categoryRules = ref([
             startY: 60,
             theme: "grid",
             margin: { top: 60, right: 40, bottom: 20, left: 40 },
-            styles: { fontSize: 10, cellPadding: 5 }, // ขนาดฟอนต์และ padding ของเซลล์
+            // ขนาดฟอนต์และ padding ของเซลล์
+            styles: { font: "Kanit-Regular", fontSize: 10, cellPadding: 5 }, // Increased font size and padding for better readability            
             columnStyles: {
                 0: { cellWidth: 30 },
                 1: { cellWidth: 'auto' },
