@@ -29,6 +29,10 @@ export default() => {
 
     // function สำหรับดึงข้อมูล product และเช็คว่ามี token หรือไม่
     const fetchWithTokenCheck = async <T>(url: string, options: object) => {
+     //start
+        try {
+            
+       
         const response = await useFetch<T>(url, options)
         console.log('line33  response.error.value=',response.error.value)
         console.log('line33  rresponse.error.value.statusCode= ดูจาก error.value.stauscode')
@@ -47,6 +51,11 @@ export default() => {
         }
 
         return response
+
+        //end
+    } catch (error) {
+        console.log('error line35=',error)
+    }
     }
 
     // function อ่านหมวดหมู่สินค้าทั้งหมด
