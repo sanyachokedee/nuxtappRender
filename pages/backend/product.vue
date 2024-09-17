@@ -298,6 +298,7 @@ const formAddSubmit = async () => {
         // Check if image is selected
         if (image.value) {
             formData.append('image', image.value);
+            console.log("have a image" , image.value)
         }
 
         // Debugging formData entries
