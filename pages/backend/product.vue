@@ -227,13 +227,14 @@
 
     // handle image change
     const handleFileChange = async (e: any) => {
+        console.log('handleFileChange', e)
         const file = (e.target as HTMLInputElement).files?.[0]
         const reader = new FileReader()
         reader.onload = (e) => {
         imageUrl.value = e.target?.result as string
         }
         reader.readAsDataURL(file!)
-        image.value = files.value[0]
+        image.value = files.value[0]        
     }
 
     // remove image
@@ -291,6 +292,7 @@
             // Check if image is selected
             if (image.value) {
                 formData.append('image', image.value);
+                console.log('image.value = ',image.value)
             }
 
             // Debugging formData entries
