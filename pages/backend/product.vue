@@ -555,6 +555,8 @@
             class="text-button"
             variant="text"
             @click="deleteProduct(deleteIndex)"
+            @keyup.delete = "deletedialog=false"
+            @keyup.a="deletedialog=false"
             >
             Delete
             </v-btn>
@@ -562,8 +564,7 @@
             color="grey-darken-1"
             class="text-button"
             variant="text"
-            @click="deletedialog=false"
-            @keyup.delete = "deletedialog"
+            @click="deletedialog=false"          
             >
             Cancle
             </v-btn>
