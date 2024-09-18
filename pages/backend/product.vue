@@ -563,6 +563,7 @@
             class="text-button"
             variant="text"
             @click="deletedialog=false"
+            @keyup.delete = "deletedialog"
             >
             Cancle
             </v-btn>
